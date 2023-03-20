@@ -39,7 +39,7 @@ sudo apt install lib32gcc-s1 steamcmd -y
 
 # 스팀 SDK 설치
 
-cd ~
+cd ~/steam
 mkdir steamcmd-source
 cd ~/steam/steamcmd-source
 wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
