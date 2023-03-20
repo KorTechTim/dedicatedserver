@@ -9,8 +9,8 @@ echo
 sleep 2
 
 
-sudo useradd -m -d /home/steam steamcmd
-sudo passwd steamcmd
-sudo usermod -aG sudo steamcmd
-sudo chsh -s /bin/bash steamcmd 
-sudo su - steamcmd
+useradd -m -d /home/steam steamcmd
+passwd steamcmd
+usermod -aG sudo steamcmd
+chsh -s /bin/bash steamcmd 
+su - steamcmd
