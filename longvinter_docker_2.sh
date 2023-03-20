@@ -23,6 +23,16 @@ while :; do
 done
 
 echo
+
+
+
+# 호스트명 정렬 # 
+cat <<-EOF > /etc/hosts
+# Any manual change will be lost if the host name is changed or system upgrades.
+127.0.0.1       ${HOSTNAME}                                                      
+::1             ${HOSTNAME}  
+EOF
+
  
 # 패키지 업데이트 & 설치
 sudo apt update -y 
