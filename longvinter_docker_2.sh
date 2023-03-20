@@ -25,10 +25,6 @@ done
 echo
  
 # 패키지 업데이트 & 설치
-
-mkdir ~/steam
-cd ~
-
 sudo apt update -y 
 sudo apt install git git-lfs screen net-tools -y 
 
@@ -40,9 +36,9 @@ sudo apt install lib32gcc-s1 steamcmd -y
 
 # 스팀 SDK 설치
 
-cd ~/steam
+cd ~/
 mkdir steamcmd-source
-cd ~/steam/steamcmd-source
+cd steamcmd-source
 wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
 tar -xvzf steamcmd_linux.tar.gz
 ./steamcmd.sh +force_install_dir . +login anonymous +app_update 1007 +quit
@@ -50,21 +46,21 @@ tar -xvzf steamcmd_linux.tar.gz
 
 
 # Copying Steam SDK to the right place
-cd ~/steam/.steam
+cd ~/.steam
 mkdir sdk64
-cp ~/steam/steamcmd-source/linux64/steamclient.so ~/steam/.steam/sdk64/
+cp ~/steamcmd-source/linux64/steamclient.so ~/.steam/sdk64/
 
 
 
 #서버 설치
-cd ~/steam
+cd ~/
 git clone https://github.com/Uuvana-Studios/longvinter-linux-server.git
 sudo chmod -R ugo+rwx longvinter-linux-server/
 
 
 # 환경 변수 파일 
 
-cat <<-EOF > ~/steam/longvinter-linux-server/Longvinter/Saved/Config/LinuxServer/Game.ini
+cat <<-EOF > ~/longvinter-linux-server/Longvinter/Saved/Config/LinuxServer/Game.ini
 [/Game/Blueprints/Server/GI_AdvancedSessions.GI_AdvancedSessions_C]
 ServerName=Unnamed Island
 ServerTag=Default
