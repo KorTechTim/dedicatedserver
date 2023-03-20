@@ -26,6 +26,7 @@ echo
  
 # 패키지 업데이트 & 설치
 
+mkdir ~/steam
 cd ~
 
 sudo apt update -y 
