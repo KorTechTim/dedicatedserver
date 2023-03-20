@@ -9,6 +9,15 @@ echo
 sleep 2
 
 
+# 호스트명 정렬 # 
+cat <<-EOF > /etc/hosts
+# Any manual change will be lost if the host name is changed or system upgrades.
+127.0.0.1       ${HOSTNAME}                                                      
+::1             ${HOSTNAME}  
+EOF
+
+
+
 useradd -m -d /home/steam steamcmd
 passwd steamcmd
 usermod -aG sudo steamcmd
