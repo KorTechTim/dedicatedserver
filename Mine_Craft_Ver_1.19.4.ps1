@@ -9,7 +9,7 @@ $MinecraftServerPath = $env:USERPROFILE + "\Downloads\" + $dirname
 $filePath = $env:USERPROFILE + "\Downloads\" + $dirname
 $euel = "eula=true"
 $downloadlocatoin = $filePath + "\" + $clientExe
-$downloadlocatoin2 = $filePath + "\" + $PortMinerName
+$downloadlocatoin2 = $filePath + "\" + $PlayitURL
 $server_start = "java -Xmx1G -Xms1G -jar server.jar nogui"
 
 
