@@ -1,7 +1,7 @@
 # define variable
 $javaInstaller = "https://download.oracle.com/java/20/latest/jdk-20_windows-x64_bin.msi"
 $clientExe = "server.jar"
-$PortMinerName = "PortMiner5.6.zip"
+$PlayitName = "playit-0.9.3-signed.exe"
 $clientURL = "https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar"
 $PlayitURL = "https://github.com/playit-cloud/playit-agent/releases/download/v0.9.3/playit-0.9.3-signed.exe"
 $dirname = "minecraft_server"
