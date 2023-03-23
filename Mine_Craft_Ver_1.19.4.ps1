@@ -3,7 +3,7 @@ $javaInstaller = "https://download.oracle.com/java/20/latest/jdk-20_windows-x64_
 $clientExe = "server.jar"
 $PortMinerName = "PortMiner5.6.zip"
 $clientURL = "https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar"
-$portminerURL = "https://github.com/smithy212000/PortMiner/releases/download/5.6/PortMiner5.6.zip"
+$PlayitURL = "https://github.com/playit-cloud/playit-agent/releases/download/v0.9.3/playit-0.9.3-signed.exe"
 $dirname = "minecraft_server"
 $MinecraftServerPath = $env:USERPROFILE + "\Downloads\" + $dirname
 $filePath = $env:USERPROFILE + "\Downloads\" + $dirname
@@ -39,11 +39,11 @@ echo ''
 echo ''
 echo ''
 echo ===========================================================
-echo 'PortMiner Install in progress'
+echo 'Playit Downloading'
 echo ===========================================================
-(New-Object System.Net.WebClient).DownloadFile($portminerURL,$downloadlocatoin2)
+(New-Object System.Net.WebClient).DownloadFile($PlayitURL,$downloadlocatoin2)
 #wget Uri $portminerURL -OutFile $downloadlocatoin2
-Expand-Archive $MinecraftServerPath\$PortMinerName -DestinationPath $MinecraftServerPath
+#Expand-Archive $MinecraftServerPath\$PortMinerName -DestinationPath $MinecraftServerPath
 
 # Firewall Rules
 echo ''
