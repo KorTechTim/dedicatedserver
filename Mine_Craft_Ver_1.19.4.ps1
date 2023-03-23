@@ -18,6 +18,25 @@ echo 'Starting Install Minecraft 1.19.4'
 echo 'Script Ver 1.19.4'
 Start-Sleep -Seconds 3
 
+
+# checking downloads directory
+
+echo ''
+echo ''
+echo '' 
+echo ===========================================================
+echo 'checking the previous directory'
+echo ===========================================================
+if (Test-Path -Path $MinecraftServerPath -PathType Container) {
+    "minecraft_server directory already exists. Please remove directory"
+    Break
+    pause
+}
+
+
+
+
+
 # download Minecraft server
 cd $env:USERPROFILE\"Downloads"
 md $dirname
