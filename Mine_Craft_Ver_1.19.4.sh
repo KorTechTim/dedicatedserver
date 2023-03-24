@@ -56,6 +56,7 @@ EOF
 ## 완료 ##
 echo "---------------------------------------------------------------------------"
 echo "설치가 완료 되었습니다 아래 명령어를 사용하여 서버를 실행하세요" 
+echo "cd ~/minecraft_server"
 echo "java -Xmx1G -Xms1G -jar ~/minecraft_server/server.jar nogui"
 echo ""
 echo "옵션 설명 ==> Xmx : 최대 메모리, Xms : 최소 메모리"
