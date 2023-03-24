@@ -11,7 +11,7 @@ while :; do
     echo
     echo "--------------------------------------------------------"
     echo "Tech Tim 채널 구독과 좋아요 부탁 드립니다."
-    echo "https://www.youtube.com/channel/UCTKC1JQaVY-QvLKyGt84I5w" 
+    echo "https://www.youtube.com/@koryechtim" 
     echo "Script Ver 1.19.4"
     echo "--------------------------------------------------------"
     echo
