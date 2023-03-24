@@ -16,7 +16,7 @@ while :; do
     echo "--------------------------------------------------------"
     echo
     sleep 2
-    echo "롱빈터 서버 구축 스크립트를 동작 합니다 "
+    echo "마인크래프트 서버 구축 스크립트를 동작 합니다 "
     echo -n "시작 하겠습니까? [yes/no]  "
     read -r answer
     case $answer in
