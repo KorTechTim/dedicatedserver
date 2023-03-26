@@ -64,6 +64,8 @@ sudo iptables -I INPUT -p tcp --dport 27015 -j ACCEPT
 sudo ufw allow 7777/udp
 sudo ufw allow 27016
 sudo ufw allow 27015
+sudo netfilter-persistent save
+
 
 #서버 설치
 cd ~/
