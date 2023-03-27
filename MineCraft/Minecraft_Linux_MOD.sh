@@ -13,7 +13,7 @@ export LOG_FILE="TechTimScript_${LOG_DIR}_${DATE_TIME}.log"
 
 #===============================================================================
 
-function MODAvailableCheck()
+MODAvailableCheck()
 {
   wget https://maven.minecraftforge.net/net/minecraftforge/forge/${MODVersion}/forge-${MODVersion}-installer.jar
   
@@ -25,8 +25,9 @@ function MODAvailableCheck()
 }
 
 
+
 #===============================================================================
-function InstallApps()
+InstallApps()
 {
   sudo apt update -y 
   sudo apt install screen openjdk-18-jdk -y 
@@ -35,7 +36,7 @@ function InstallApps()
 
 
 #===============================================================================
-function RunInstaller()
+RunInstaller()
 {
   java -jar forge-${MODVersion}-installer.jar --installServer
 }
@@ -43,7 +44,7 @@ function RunInstaller()
 
 
 #===============================================================================
-function User_Jvm_Args()
+User_Jvm_Args()
 {
 cat <<-EOF > ~/user_jvm_args.txt
 # Xmx and Xms set the maximum and minimum RAM usage, respectively.
@@ -59,14 +60,14 @@ EOF
 
 
 #===============================================================================
-function FirstRun()
+FirstRun()
 {
  ~/run.sh 
 }
 
 
 #===============================================================================
-function EULA()
+EULA()
 {
 cat <<-EOF > ~/eula.txt
 eula=true
