@@ -101,7 +101,7 @@ EOF
   echo 
   echo 
   echo "설치를 원하시는 마인 크래프트의 MOD 버전을 입력해주세요 (공백없이)"
-  echo "예시 : "
+  echo "예시 : 1.19.3-44.1.0"
   read -r MODVersion
 
   echo 
