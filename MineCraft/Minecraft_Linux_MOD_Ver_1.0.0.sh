@@ -43,6 +43,7 @@ read -r MaxMemory
 MODAvailableCheck()
 #===============================================================================
 {
+  cd ~
   wget https://maven.minecraftforge.net/net/minecraftforge/forge/${MODVersion}/forge-${MODVersion}-installer.jar
   
   if [ ${?} != "0" ]
