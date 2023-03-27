@@ -8,7 +8,7 @@
 #------ 환경 변수 선언구 -------#
 export LOG_DIR="~" 
 export DATE_TIME=`date +%Y%m%d%H%M%S`
-export LOG_FILE="TechTimScript_${LOG_DIR}/${DATE_TIME}.log"
+export LOG_FILE="TechTimScript_${LOG_DIR}_${DATE_TIME}.log"
 
 
 #===============================================================================
