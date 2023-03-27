@@ -12,8 +12,8 @@ export LOG_FILE="TechTimScript_${LOG_DIR}_${DATE_TIME}.log"
 
 
 #===============================================================================
-function (MODAvailableCheck)
-#===============================================================================
+
+function()MODAvailableCheck
 {
   wget https://maven.minecraftforge.net/net/minecraftforge/forge/${MODVersion}/forge-${MODVersion}-installer.jar
   
@@ -26,8 +26,7 @@ function (MODAvailableCheck)
 
 
 #===============================================================================
-function (InstallApps)
-#===============================================================================
+function()InstallApps
 {
   sudo apt update -y 
   sudo apt install screen openjdk-18-jdk -y 
@@ -36,16 +35,15 @@ function (InstallApps)
 
 
 #===============================================================================
-function (RunInstaller)
-#===============================================================================
+function()RunInstaller
 {
   java -jar forge-${MODVersion}-installer.jar --installServer
 }
 
 
+
 #===============================================================================
-function (User_Jvm_Args)
-#===============================================================================
+function()User_Jvm_Args
 {
 cat <<-EOF > ~/user_jvm_args.txt
 # Xmx and Xms set the maximum and minimum RAM usage, respectively.
@@ -61,16 +59,14 @@ EOF
 
 
 #===============================================================================
-function (FirstRun)
-#===============================================================================
+function()FirstRun
 {
  ~/run.sh 
 }
 
 
 #===============================================================================
-function (EULA)
-#===============================================================================
+function()EULA
 {
 cat <<-EOF > ~/eula.txt
 eula=true
