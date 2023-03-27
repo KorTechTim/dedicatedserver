@@ -26,7 +26,8 @@ sleep 1
 echo 
 echo 
 echo "https://files.minecraftforge.net/net/minecraftforge/forge"
-echo "위 사이트를 참조하여 설치를 원하시는 마인 크래프트의 MOD 버전을 입력해주세요 버전 정보는 공백이 없어야 합니다. "
+echo "위 사이트를 참조하여 설치를 원하시는 마인 크래프트의 MOD 버전을 입력해주세요"
+echo "버전 정보는 공백이 없어야 합니다. "
 echo "올바른 예시 : 1.19.3-44.1.0"
 echo "잘못된 예시 : 1.19.3 - 44.1.0 "
 read -r MODVersion
