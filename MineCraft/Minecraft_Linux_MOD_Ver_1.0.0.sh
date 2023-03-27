@@ -11,7 +11,7 @@ echo "https://www.youtube.com/@koryechtim"
 echo "#################################################################################"
 sleep 1
 echo 
-echo "마인크래프트 서버 구축 스크립트를 동작 합니다 "
+echo "마인크래프트 (MOD)서버 구축 스크립트를 동작 합니다 "
 echo -n "시작 하겠습니까? [yes/no]  "
 read -r answer
 case $answer in
