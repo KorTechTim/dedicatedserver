@@ -12,7 +12,7 @@ export LOG_FILE="TechTimScript_${LOG_DIR}_${DATE_TIME}.log"
 
 
 #===============================================================================
-function MODAvailableCheck
+function (MODAvailableCheck)
 #===============================================================================
 {
   wget https://maven.minecraftforge.net/net/minecraftforge/forge/${MODVersion}/forge-${MODVersion}-installer.jar
@@ -26,7 +26,7 @@ function MODAvailableCheck
 
 
 #===============================================================================
-function InstallApps
+function (InstallApps)
 #===============================================================================
 {
   sudo apt update -y 
@@ -36,7 +36,7 @@ function InstallApps
 
 
 #===============================================================================
-function RunInstaller
+function (RunInstaller)
 #===============================================================================
 {
   java -jar forge-${MODVersion}-installer.jar --installServer
@@ -44,7 +44,7 @@ function RunInstaller
 
 
 #===============================================================================
-function User_Jvm_Args
+function (User_Jvm_Args)
 #===============================================================================
 {
 cat <<-EOF > ~/user_jvm_args.txt
@@ -53,7 +53,6 @@ cat <<-EOF > ~/user_jvm_args.txt
 # M means Megabyte, G means Gigabyte.
 # For example, to set the maximum to 3GB: -Xmx3G
 # To set the minimum to 2.5GB: -Xms2500M
-
 # A good default for a modded server is 4GB.
 # Uncomment the next line to set it.
 -Xmx${MaxMemory}M
@@ -62,7 +61,7 @@ EOF
 
 
 #===============================================================================
-function FirstRun
+function (FirstRun)
 #===============================================================================
 {
  ~/run.sh 
@@ -70,7 +69,7 @@ function FirstRun
 
 
 #===============================================================================
-function EULA
+function (EULA)
 #===============================================================================
 {
 cat <<-EOF > ~/eula.txt
