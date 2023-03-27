@@ -17,7 +17,7 @@ echo -n "시작 하겠습니까? [yes/no]  "
 read -r answer
 case $answer in
       YES|Yes|yes|y)
-      break;;
+
       NO|No|no|n)
       echo Aborting; exit;;
 esac
