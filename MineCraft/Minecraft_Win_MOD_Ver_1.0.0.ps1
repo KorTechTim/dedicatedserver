@@ -178,7 +178,7 @@ sleep 1
 echo ===========================================================
 echo 'All installation task has been completed'
 echo 'move to Downloads folder then excute the "run.bat" file to start MOD server '
-echo 'Dont for get subscribe and like my channel :)'
+echo 'Dont forget subscribe and like my channel :)'
 echo 'https://www.youtube.com/@koryechtim'
 echo ===========================================================
 echo ''
