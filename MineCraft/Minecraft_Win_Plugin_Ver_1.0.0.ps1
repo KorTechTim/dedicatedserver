@@ -49,7 +49,7 @@ else
 sleep 1
 echo ''
 echo ===============================================================================
-echo 'https://getbukkit.org'
+echo 'https://getbukkit.org/download/spigot'
 echo 'Pease refer the minecraft spigot site then find the version of plugin server'
 echo ===============================================================================
 echo ''
