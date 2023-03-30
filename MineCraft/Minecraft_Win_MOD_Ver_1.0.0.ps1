@@ -15,7 +15,7 @@ $PlayitURL = "https://github.com/playit-cloud/playit-agent/releases/download/v0.
 ##########################################################
 echo ===========================================================
 echo 'Starting Install Minecraft MOD Server'
-echo 'TechTim cript Ver 1.0.0'
+echo 'TechTim Script Ver 1.0.0'
 echo ===========================================================
 echo ''
 
