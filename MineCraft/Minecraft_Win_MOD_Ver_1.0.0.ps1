@@ -97,7 +97,7 @@ echo 'Please type the max momory size of MOD server (MB)'
 echo 'ie : 4GB=4096, 8GB=8192, 5100MB=5100'
 echo ===========================================================
 echo ''
-$MaxMemory = Read-Host -Prompt "Type the max memory site(MB) "
+$MaxMemory = Read-Host -Prompt "Type the max memory size(MB) "
 
 
 
