@@ -76,23 +76,6 @@ RunInstaller()
 
 
 #===============================================================================
-User_Jvm_Args()
-#===============================================================================
-{
-cat <<-EOF > ~/user_jvm_args.txt
-# Xmx and Xms set the maximum and minimum RAM usage, respectively.
-# They can take any number, followed by an M or a G.
-# M means Megabyte, G means Gigabyte.
-# For example, to set the maximum to 3GB: -Xmx3G
-# To set the minimum to 2.5GB: -Xms2500M
-# A good default for a modded server is 4GB.
-# Uncomment the next line to set it.
--Xmx${MaxMemory}M
-EOF
-}
-
-
-#===============================================================================
 FirstRun()
 #===============================================================================
 {
@@ -180,7 +163,7 @@ echo "서버 설치가 완료 되었습니다."
 echo "서버 실행전 screen 유틸리티를 사용하여 Screen 터미널로 접그 하고"
 echo "그 이후 아래 명령어를 실행해서 마인크래프트 서버를 구동 하세요"
 echo "========================================================================"
-echo "java -Xms${MaxMemory} -Xmx${MaxMemory} -jar forge-${MODVersion}-installer.jar nogui"
+echo "java -Xms${MaxMemory} -Xmx${MaxMemory} -jar forge-${MODVersion}.jar nogui"
 echo
 echo
   
