@@ -77,7 +77,7 @@ InstallApps()
 RunInstaller()
 #===============================================================================
 {
-  java -jar fabric-server-mc.${MinecraftVersion}-loader.${FabricVersion}-launcher.${InstallerVersion} nogui
+  java -jar ~/minecraft/fabric-server-mc.${MinecraftVersion}-loader.${FabricVersion}-launcher.${InstallerVersion} nogui
 }
 
 
