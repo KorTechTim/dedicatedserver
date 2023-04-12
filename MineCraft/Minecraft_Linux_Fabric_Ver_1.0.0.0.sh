@@ -161,7 +161,8 @@ echo "2. 메모리 크기는 환경에 맞춰서 수정하여 사용합니다. "
 echo "3. Fabric API는 https://www.curseforge.com/minecraft/mc-mods/fabric-api 에서 직접 다운로드 받아 mods 디렉토리에 업로드 합니다. "
 echo "4. 서버 커맨드 실행전 screen 명령어를 사용하여 백그라운드로 돌리세요"
 echo "========================================================================"
-echo "java -Xms2G -Xmx2G -jar ~/minecraft/fabric-server-mc.${MinecraftVersion}-loader.${FabricVersion}-launcher.${InstallerVersion} nogui"
+echo "cd ~/minecraft"
+echo "java -Xms2G -Xmx2G -jar ./fabric-server-mc.${MinecraftVersion}-loader.${FabricVersion}-launcher.${InstallerVersion} nogui"
 echo
 echo
   
