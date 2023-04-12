@@ -52,7 +52,7 @@ MODAvailableCheck()
   mkdir ~/minecraft
   cd ~/minecraft/
   curl -OJ https://meta.fabricmc.net/v2/versions/loader/${MinecraftVersion}/${FabricVersion}/${InstallerVersion}/server/jar
-  ls -l | grep fabric 2>&1
+  ls -l | grep fabric 
   
   if [ ${?} != "0" ]
   then
