@@ -89,6 +89,7 @@ RunInstaller()
 EULA()
 #===============================================================================
 {
+cd ~/minecraft
 cat <<-EOF > ~/minecraft/eula.txt
 eula=true
 EOF
