@@ -79,7 +79,7 @@ RunInstaller()
 #===============================================================================
 {
   cd ~/minecraft
-  java -jar ./minecraft/fabric-server-mc.${MinecraftVersion}-loader.${FabricVersion}-launcher.${InstallerVersion}.jar nogui
+  java -jar ./fabric-server-mc.${MinecraftVersion}-loader.${FabricVersion}-launcher.${InstallerVersion}.jar nogui
 }
 
 
