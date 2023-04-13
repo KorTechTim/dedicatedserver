@@ -176,6 +176,5 @@ echo "이후 screen 명령어와 아래 커맨드를 실행해서 롱빈터 서�
 echo "========================================================================"
 echo "sh ~/longvinter-linux-server/LongvinterServer.sh"
 echo
-echo
   
 exit 0
