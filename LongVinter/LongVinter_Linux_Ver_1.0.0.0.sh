@@ -32,7 +32,7 @@ InstallApps()
 #===============================================================================
 {
   sudo apt update -y && sudo apt upgrade -y && sleep 1  
-  sudo apt install git git-lfs -y && sleep 1 
+  sudo apt install git git-lfs nano iptables-persistent -y && sleep 1 
   sudo add-apt-repository multiverse -y && sleep 1
   sudo dpkg --add-architecture i386 -y 
   sleep 1 
@@ -174,7 +174,7 @@ echo "nano ~/longvinter-linux-server/Longvinter/Saved/Config/LinuxServer/Game.in
 echo 
 echo "이후 screen 명령어와 아래 커맨드를 실행해서 롱빈터 서버를 구동 하세요"
 echo "========================================================================"
-echo "sh ~/steam/longvinter-linux-server/LongvinterServer.sh"
+echo "sh ~/longvinter-linux-server/LongvinterServer.sh"
 echo
 echo
   
