@@ -31,7 +31,7 @@ echo
 InstallApps()
 #===============================================================================
 {
-  sudo apt update -y && sleep 1  
+  sudo apt update -y && sudo apt upgrade -y && sleep 1  
   sudo apt install git git-lfs -y && sleep 1 
   sudo add-apt-repository multiverse -y && sleep 1
   sudo dpkg --add-architecture i386 -y && sleep 1
