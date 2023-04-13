@@ -55,16 +55,14 @@ InstallingSteamSDK()
 
 
 
-#===============================================================================
- CopyingSteamSDK()
-#===============================================================================
+#=================================
+CopyingSteamSDK()
+#=================================
 {
 cd ~/.steam
 mkdir sdk64
 cp ~/steamcmd-source/linux64/steamclient.so ~/.steam/sdk64/
 }
-
-
 
 
 #===============================================================================
@@ -80,7 +78,7 @@ FireWall()
 
 
 #===============================================================================
-FireWall()
+InstallingTheServer()
 #===============================================================================
 {
 cd ~/
@@ -90,12 +88,25 @@ sudo chmod -R ugo+rwx longvinter-linux-server/
 
 
 #===============================================================================
-Customizingtheserver()
+CustomizingTheServer()
 #===============================================================================
 {
-cd ~/
-git clone https://github.com/Uuvana-Studios/longvinter-linux-server.git
-sudo chmod -R ugo+rwx longvinter-linux-server/
+[/Game/Blueprints/Server/GI_AdvancedSessions.GI_AdvancedSessions_C]
+ServerName=Unnamed Island
+ServerTag=Default
+MaxPlayers=32
+ServerMOTD=Welcome to Longvinter Island!
+Password=
+CommunityWebsite=www.longvinter.com
+
+[/Game/Blueprints/Server/GM_Longvinter.GM_Longvinter_C]
+AdminSteamID=76561198965966997
+PVP=true
+TentDecay=true
+MaxTents=2
+ChestRespawnTime=600
+
+EOF
 }
 
 
@@ -110,52 +121,46 @@ Welcome
 
 
 #===============================================================================
-# Step2 : Verify URL available
-#===============================================================================
-MODAvailableCheck
-
-
-#===============================================================================
-# Step3 : nstall Essential Utility
+# Step2 : InstallApps
 #===============================================================================
 InstallApps
 
 
 #===============================================================================
-# Step4 : run the forge installer file with the --installServer flag.
+# Step3 : InstallingSteamSDK
 #===============================================================================
-RunInstaller
-
-
-
-#===============================================================================
-# Step5 : FirstRun 
-#===============================================================================
-FirstRun
-
+InstallingSteamSDK
 
 
 #===============================================================================
-# Step6 : EULA
+# Step4 : CopyingSteamSDK
 #===============================================================================
-User_Jvm_Args
-
-
-#===============================================================================
-# Step7 : EULA
-#===============================================================================
-EULA
+CopyingSteamSDK
 
 
 
 #===============================================================================
-# Step8 : FireWall
+# Step5 : FireWall
 #===============================================================================
 FireWall
 
 
+
 #===============================================================================
-# Step9 : Ending Message
+# Step6 : InstallingTheServer
+#===============================================================================
+InstallingTheServer
+
+
+#===============================================================================
+# Step7 : CustomizingTheServer
+#===============================================================================
+CustomizingTheServer
+
+
+
+#===============================================================================
+# Step8 : Ending Message
 #===============================================================================
 echo 
 echo
@@ -163,10 +168,12 @@ echo
 echo
 echo "========================================================================"
 echo "서버 설치가 완료 되었습니다."
-echo "서버 실행전 screen 유틸리티를 사용하여 Screen 터미널로 접그 하고"
-echo "그 이후 아래 명령어를 실행해서 마인크래프트 서버를 구동 하세요"
+echo "서버 설정을 원하시 경우 아래 명령어를 사용하여 수정하세요 "
+echo "nano ~/longvinter-linux-server/Longvinter/Saved/Config/LinuxServer/Game.ini "
+echo 
+echo "이후 screen 명령어와 아래 커맨드를 실행해서 롱빈터 서버를 구동 하세요"
 echo "========================================================================"
-echo "sh ~/run.sh"
+echo "sh ~/steam/longvinter-linux-server/LongvinterServer.sh"
 echo
 echo
   
