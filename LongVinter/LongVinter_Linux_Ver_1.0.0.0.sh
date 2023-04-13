@@ -32,9 +32,9 @@ InstallApps()
 #===============================================================================
 {
   sudo apt update -y && sleep 1  
-  sudo apt install git git-lfs && sleep 1 
-  sudo add-apt-repository multiverse && sleep 1
-  sudo dpkg --add-architecture i386 && sleep 1
+  sudo apt install git git-lfs -y && sleep 1 
+  sudo add-apt-repository multiverse -y && sleep 1
+  sudo dpkg --add-architecture i386 -y && sleep 1
   sudo apt update -y 
   sudo apt install lib32gcc-s1 steamcmd -y 
 }
