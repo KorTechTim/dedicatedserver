@@ -91,6 +91,7 @@ sudo chmod -R ugo+rwx longvinter-linux-server/
 CustomizingTheServer()
 #===============================================================================
 {
+cat <<-EOF > ~/longvinter-linux-server/Longvinter/Saved/Config/LinuxServer/Game.ini
 [/Game/Blueprints/Server/GI_AdvancedSessions.GI_AdvancedSessions_C]
 ServerName=Unnamed Island
 ServerTag=Default
@@ -105,7 +106,6 @@ PVP=true
 TentDecay=true
 MaxTents=2
 ChestRespawnTime=600
-
 EOF
 }
 
