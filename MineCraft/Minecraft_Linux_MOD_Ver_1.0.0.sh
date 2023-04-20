@@ -44,12 +44,12 @@ read -r MaxMemory
 MODAvailableCheck()
 #===============================================================================
 {
-  cd ~
+  cd ~ && mkdir minecraft && cd minecraft
   wget https://maven.minecraftforge.net/net/minecraftforge/forge/${MODVersion}/forge-${MODVersion}-installer.jar
   
   if [ ${?} != "0" ]
   then
-    echo "입력하신 버전으로 MOD를 다운로드 할 수 없습니다. 버전정보를 공란 없이 다시 확인하여 주세요"
+    echo "입력하신 버전으로 MOD를 찾을 수 없습니다. 버전정보를 공란 없이 다시 확인하여 주세요"
     exit 1
   fi
 }
@@ -96,7 +96,7 @@ EOF
 FirstRun()
 #===============================================================================
 {
- ~/run.sh 
+ ./run.sh 
 }
 
 
@@ -104,7 +104,7 @@ FirstRun()
 EULA()
 #===============================================================================
 {
-cat <<-EOF > ~/eula.txt
+cat <<-EOF > ./eula.txt
 eula=true
 EOF
 }
