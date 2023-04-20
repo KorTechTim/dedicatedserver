@@ -162,7 +162,7 @@ echo "3. Fabric API는 https://www.curseforge.com/minecraft/mc-mods/fabric-api �
 echo "4. 서버 커맨드 실행전 screen 명령어를 사용하여 백그라운드로 돌리세요"
 echo "========================================================================"
 echo "cd ~/minecraft"
-echo "java -Xms2G -Xmx2G -jar ./fabric-server-mc.${MinecraftVersion}-loader.${FabricVersion}-launcher.${InstallerVersion} nogui"
+echo "java -Xms2G -Xmx2G -jar ./fabric-server-mc.${MinecraftVersion}-loader.${FabricVersion}-launcher.${InstallerVersion}.jar nogui"
 echo
 echo
   
