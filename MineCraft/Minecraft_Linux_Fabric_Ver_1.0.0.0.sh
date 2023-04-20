@@ -7,7 +7,7 @@ Welcome()
 {
 echo "#################################################################################"
 echo "TechTim 채널의 자료가 도움 되신다면 구독과 좋아요 부탁 드립니다"
-echo "https://www.youtube.com/@koryechtim"                                           
+echo "https://www.youtube.com/@kortechtim"                                           
 echo "#################################################################################"
 sleep 1
 echo 
