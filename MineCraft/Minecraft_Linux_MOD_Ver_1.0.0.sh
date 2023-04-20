@@ -79,7 +79,7 @@ RunInstaller()
 User_Jvm_Args()
 #===============================================================================
 {
-cat <<-EOF > ~/user_jvm_args.txt
+cat <<-EOF > ./user_jvm_args.txt
 # Xmx and Xms set the maximum and minimum RAM usage, respectively.
 # They can take any number, followed by an M or a G.
 # M means Megabyte, G means Gigabyte.
