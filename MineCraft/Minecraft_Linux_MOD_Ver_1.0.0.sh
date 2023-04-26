@@ -79,7 +79,7 @@ RunInstaller()
 User_Jvm_Args()
 #===============================================================================
 {
-cat <<-EOF > ./user_jvm_args.txt
+cat <<-EOF > ~/minecraft/user_jvm_args.txt
 # Xmx and Xms set the maximum and minimum RAM usage, respectively.
 # They can take any number, followed by an M or a G.
 # M means Megabyte, G means Gigabyte.
@@ -96,7 +96,7 @@ EOF
 FirstRun()
 #===============================================================================
 {
- ./run.sh 
+ ~/minecraft/run.sh 
 }
 
 
@@ -104,7 +104,7 @@ FirstRun()
 EULA()
 #===============================================================================
 {
-cat <<-EOF > ./eula.txt
+cat <<-EOF > ~/minecraft/eula.txt
 eula=true
 EOF
 }
@@ -186,7 +186,7 @@ echo "서버 설치가 완료 되었습니다."
 echo "서버 실행전 screen 유틸리티를 사용하여 Screen 터미널로 접근 하고"
 echo "그 이후 아래 명령어를 실행해서 마인크래프트 서버를 구동 하세요"
 echo "========================================================================"
-echo "sh ./run.sh nogui"
+echo "sh ~/minecraft/run.sh nogui"
 echo
 echo
   
