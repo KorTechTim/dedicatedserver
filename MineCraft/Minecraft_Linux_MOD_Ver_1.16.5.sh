@@ -45,6 +45,7 @@ MODAvailableCheck()
 #===============================================================================
 {
   cd ~
+  mkdir minecraft && cd minecraft
   wget https://maven.minecraftforge.net/net/minecraftforge/forge/${MODVersion}/forge-${MODVersion}-installer.jar
   
   if [ ${?} != "0" ]
