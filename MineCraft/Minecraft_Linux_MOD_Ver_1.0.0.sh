@@ -186,7 +186,7 @@ echo "서버 설치가 완료 되었습니다."
 echo "서버 실행전 screen 유틸리티를 사용하여 Screen 터미널로 접근 하고"
 echo "그 이후 아래 명령어를 실행해서 마인크래프트 서버를 구동 하세요"
 echo "========================================================================"
-echo "sh ~/minecraft/run.sh nogui"
+echo "cd ~/minecraft/ && sh ./run.sh nogui"
 echo
 echo
   
