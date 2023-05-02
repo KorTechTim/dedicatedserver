@@ -80,7 +80,7 @@ RunInstaller()
 FirstRun()
 #===============================================================================
 {
- ~/java -Xms${MaxMemory} -Xmx${MaxMemory} -jar forge-${MODVersion}-installer.jar nogui
+ java -Xms${MaxMemory} -Xmx${MaxMemory} -jar forge-${MODVersion}-installer.jar nogui
 }
 
 
