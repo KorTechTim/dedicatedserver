@@ -65,6 +65,7 @@ MODAvailableCheck()
 InstallApps()
 #===============================================================================
 {
+  cd ~ && mkdir minecraft && cd ~/minecraft
   sudo apt update -y 
   sudo apt install screen openjdk-18-jdk -y 
 }
