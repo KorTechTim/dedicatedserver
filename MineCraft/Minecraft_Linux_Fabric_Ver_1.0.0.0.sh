@@ -49,6 +49,7 @@ read -r InstallerVersion
 MODAvailableCheck()
 #===============================================================================
 {
+  cd ~ && mkdir minecraft && cd ~/minecraft
   curl -OJ https://meta.fabricmc.net/v2/versions/loader/${MinecraftVersion}/${FabricVersion}/${InstallerVersion}/server/jar
   ls -l | grep fabric 
   
@@ -65,7 +66,6 @@ MODAvailableCheck()
 InstallApps()
 #===============================================================================
 {
-  cd ~ && mkdir minecraft && cd ~/minecraft
   sudo apt update -y 
   sudo apt install screen openjdk-18-jdk -y 
 }
@@ -86,7 +86,7 @@ RunInstaller()
 EULA()
 #===============================================================================
 {
-cat <<-EOF > ./eula.txt
+cat <<-EOF > ~/minecraft/eula.txt
 eula=true
 EOF
 }
@@ -101,6 +101,8 @@ FireWall()
   sudo iptables -I INPUT -p tcp --dport 25565 -j ACCEPT
   sudo netfilter-persistent save
 }
+
+
 
 
 
