@@ -60,7 +60,7 @@ MODAvailableCheck()
 InstallApps()
 #===============================================================================
 {
-  sudo apt update -y 
+  sudo apt update -y && sudo apt upgrade -y
   sudo apt install screen openjdk-18-jdk -y 
 }
  
@@ -70,7 +70,6 @@ InstallApps()
 RunInstaller()
 #===============================================================================
 {
-  sudo apt update -y
   java -jar forge-${MODVersion}-installer.jar --installServer
 }
 
