@@ -70,6 +70,7 @@ InstallApps()
 RunInstaller()
 #===============================================================================
 {
+  sudo apt update -y
   java -jar forge-${MODVersion}-installer.jar --installServer
 }
 
