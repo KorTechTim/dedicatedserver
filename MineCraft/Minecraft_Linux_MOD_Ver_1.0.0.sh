@@ -72,6 +72,19 @@ RunInstaller()
 {
   cd ~/minecraft
   java -jar forge-${MODVersion}-installer.jar --installServer
+    
+  if [ ${?} != "0" ]
+  then
+    echo 
+    echo 
+    echo "============================================================================================"
+    echo "MOJANG Jar Server와 통신이 원활하지 않습니다. 이 경우 스크립트를 다시 실행 하세요 기존 설치 파일은 자동 삭제 합니다"
+    echo "============================================================================================"
+    echo
+    cd ~ && rm -rf ./minecraft
+    sleep 2
+    exit 1
+  fi
 }
 
 
