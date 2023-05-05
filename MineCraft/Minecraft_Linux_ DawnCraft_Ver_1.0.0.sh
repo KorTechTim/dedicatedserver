@@ -23,17 +23,17 @@ esac
 
 echo 
 echo 
-echo "https://files.minecraftforge.net/net/minecraftforge/forge"
-echo "위 사이트를 참조하여 설치를 원하시는 마인 크래프트의 MOD 버전을 입력해주세요"
+echo "다운로드 받은 SERVER_README.txt 파일으 참조하여, 마인 크래프트의 MOD 버전을 입력해주세요"
 echo "버전 정보는 공백이 없어야 합니다. "
 echo "올바른 예시 : 1.19.3-44.1.0"
 echo "잘못된 예시 : 1.19.3 - 44.1.0 "
+echo "========================================================================"
 read -r MODVersion
 
 echo 
 echo 
 echo "마인크래프트 모드 서버의 최대 메모리 사이즈를 넣어주세요(MB)"
-echo "예시 : 100MB는 100, 1GB는 1024, 2GB는 2048"
+echo "예시 : 100MB는 100, 4GB는 4096, 8GB는 8192"
 read -r MaxMemory
 }
 
@@ -72,6 +72,14 @@ RunInstaller()
 {
   cd ~/minecraft
   java -jar forge-${MODVersion}-installer.jar --installServer
+    
+  if [ ${?} != "0" ]
+  then
+    echo "MOJANG Jar Server와 통신이 원활하지 않습니다. 스크립트를 다시 실해 하세요 기존 설치 파일은 자동 삭제 합니다"
+    cd ~ && rm -rf ./minecraft
+    sleep 1
+    exit 1
+  fi
 }
 
 
