@@ -97,7 +97,7 @@ FirstRun()
 #===============================================================================
 {
   cd ~/minecraft
-  java -Xmx${MaxMemory}M -jar forge-${MODVersion}.jar nogui"
+  java -Xmx${MaxMemory}M -jar forge-${MODVersion}.jar nogui
 }
 
 
