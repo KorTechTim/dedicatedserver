@@ -78,6 +78,21 @@ RunInstaller()
 {
   cd ~/minecraft
   java -jar fabric-server-mc.${MinecraftVersion}-loader.${FabricVersion}-launcher.${InstallerVersion}.jar nogui
+  
+  if [ ${?} != "0" ]
+  then
+  echo 
+  echo 
+  echo "============================================================================================"
+  echo "현재 MOJANG Server 자체적으로 문제가 있습니다. MOJANG Jar Server와 통신이 원활하지 않습니다."
+  echo "이 메시지르 보시 경우 스크립트를 다시 실행 하세요 기존 설치 파일은 자동 삭제 합니다"
+  echo "6~7번 정도 실행하면 정상적인 서버와 연결되어 설치 됩니다. 서버가 정상화 되기 전까지 당분간 이렇게 진행해야 합니다"
+  echo "============================================================================================"
+  echo
+  cd ~ && rm -rf ./minecraft
+  sleep 2
+  exit 1
+  fi
 }
 
 
