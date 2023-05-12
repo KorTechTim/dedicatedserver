@@ -62,7 +62,7 @@ InstallApps()
 #===============================================================================
 {
   sudo apt update
-  sudo apt install screen openjdk-18-jdk -y 
+  sudo apt-get install default-jdk -y
 }
  
 
