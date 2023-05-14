@@ -107,12 +107,12 @@ $MaxMemory = Read-Host -Prompt "Type the max memory size(MB) "
 # 스탭 5 : 초벌 실행
 ##########################################################
 iex 'java -jar forge-${ModVersion}-installer.jar --installServer'
-if($? -ne "True"){
-    echo ==========================================
+if($? -ne $True){
+    echo =======================================================
     echo 'There was connection issue with MOJANG studio URl'
     echo 'Unable to complete installation task' 
     echo 'Please try installation task again'
-    echo ==========================================
+    echo =======================================================
     cd $env:USERPROFILE\"Downloads"\
     Remove-Item $env:USERPROFILE\"Downloads"\$dirname -Recurse
     Break
