@@ -35,7 +35,7 @@ sudo apt install screen openjdk-18-jdk -y
 
 # 마인크래프트 서버 설치 
 cd ~
-wget https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar
+wget https://piston-data.mojang.com/v1/objects/8f3112a1049751cc472ec13e397eade5336ca7ae/server.jar 
 
 # 마인크래프트 초기 실행 
 java -Xmx1024M -Xms1024M -jar server.jar nogui
@@ -44,6 +44,7 @@ java -Xmx1024M -Xms1024M -jar server.jar nogui
 # 방화벽 개방
 sudo iptables -I INPUT -p udp --dport 25565 -j ACCEPT
 sudo iptables -I INPUT -p tcp --dport 25565 -j ACCEPT
+sudo netfilter-persistent save
 
 
 ## 라이센스 파일 등록
