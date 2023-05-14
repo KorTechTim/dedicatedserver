@@ -113,8 +113,9 @@ if($? -ne 0){
     echo 'Unable to complete installation task' 
     echo 'Please try installation task again'
     echo ==========================================
-    Break
+    cd $env:USERPROFILE\"Downloads"\
     Remove-Item $env:USERPROFILE\"Downloads"\$dirname -Recurse
+    Break
     pause
 }
 
