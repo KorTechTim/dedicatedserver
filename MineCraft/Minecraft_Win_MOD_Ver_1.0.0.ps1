@@ -74,7 +74,7 @@ cd $env:USERPROFILE\"Downloads"
 md $dirname
 cd $env:USERPROFILE\"Downloads"\$dirname
 (New-Object System.Net.WebClient).DownloadFile($clientURL,$downloadlocation) 
-if($? -eq "True"){
+if($? -eq $True){
     Write-Host "Mod file download has been competed."
     sleep 2
 }else{
@@ -107,7 +107,7 @@ $MaxMemory = Read-Host -Prompt "Type the max memory size(MB) "
 # 스탭 5 : 초벌 실행
 ##########################################################
 iex 'java -jar forge-${ModVersion}-installer.jar --installServer'
-if($? -ne "True"){
+if($? -ne $True){
     echo ==========================================
     echo 'There was connection issue with MOJANG studio URl'
     echo 'Unable to complete installation task' 
