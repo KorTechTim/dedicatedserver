@@ -14,8 +14,8 @@ $PlayitURL = "https://github.com/playit-cloud/playit-agent/releases/download/v0.
 # 스탭 1 : Welcome Message
 ##########################################################
 echo ===========================================================
-echo 'Starting Install Minecraft MOD Server'
-echo 'TechTim Script Ver 1.0.0'
+echo 'TechTim 채널의 자료가 도움 되신다면 구독과 좋아요 부탁 드립니다'
+echo 'https://www.youtube.com/@kortechtim'
 echo ===========================================================
 echo ''
 
