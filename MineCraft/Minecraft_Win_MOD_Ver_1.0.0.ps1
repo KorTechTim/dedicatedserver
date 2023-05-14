@@ -79,8 +79,8 @@ if($? -eq "0"){
     sleep 2
 }else{
     Write-Host "Given MOD file information was not correct. Please verify MOD server version again."
+    Break
     pause
-    exit
 }
 
 
@@ -113,9 +113,9 @@ if($? -ne 0){
     echo 'Unable to complete installation task' 
     echo 'Please try installation task again'
     echo ==========================================
+    Break
     Remove-Item $env:USERPROFILE\"Downloads"\$dirname -Recurse
     pause
-    exit 
 }
 
 ##########################################################
