@@ -114,7 +114,7 @@ if($? -ne 0){
     echo ==========================================
     Remove-Item $env:USERPROFILE\"Downloads"\$dirname -Recurse
     pause
-    exit
+    exit 
 }
 
 ##########################################################
