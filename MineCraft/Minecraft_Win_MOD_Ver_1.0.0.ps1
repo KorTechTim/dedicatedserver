@@ -80,6 +80,7 @@ if($? -eq "0"){
 }else{
     Write-Host "Given MOD file information was not correct. Please verify MOD server version again."
     pause
+    exit
 }
 
 
