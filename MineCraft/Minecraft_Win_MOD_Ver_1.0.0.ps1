@@ -36,7 +36,6 @@ if (Test-Path -Path $MinecraftServerPath -PathType Container)
 {
     "MineCraft MOD exists. Please remove the previous MOD directory first "
     Break
-    pause
 }
 else
 {
