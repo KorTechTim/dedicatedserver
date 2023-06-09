@@ -43,7 +43,7 @@ InstallApps()
 RunInstaller()
 #===============================================================================
 {
-  java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
+  java -Xmx1024M -Xms1024M -jar server.jar nogui
 }
 
 
@@ -52,7 +52,7 @@ RunInstaller()
 FirstRun()
 #===============================================================================
 {
- java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui
+ java -Xmx1024M -Xms1024M -jar server.jar nogui
 }
 
 
@@ -130,7 +130,7 @@ echo "서버 설치가 완료 되었습니다."
 echo "서버 실행전 screen 유틸리티를 사용해주시고, 게임실행은 아래 명령어르 이용하세요"
 echo "-Xmx : 최대 메모리      -Xms : 최소 메모리"
 echo "========================================================================"
-echo "java -Xmx1024M -Xms1024M -jar minecraft_server.jar nogui"
+echo "java -Xmx1024M -Xms1024M -jar server.jar nogui"
 echo
 echo
   
