@@ -9,7 +9,7 @@ do
     discord_webhook_url="Your_Webhook_URL_Here"
     User_New=$(cat Your_Longvinter.log_File_Location_Here |grep "Join succeeded"|tail -n 1|dos2unix|cut -d 'd' -f3|cut -d ' ' -f2)
     EOSID=$(cat Your_Longvinter.log_File_Location_Here |grep $User_New|grep Redpoint|tail -n 1|dos2unix|cut -d ':' -f6|cut -d ' ' -f1)
-    LogDate=`date`
+    LogDate=`date "+%Y-%m-%d %H:%M:%S"`
     msg=$LogDate"    /    접속자: "$User_New"    /    EOSID : "$EOSID
 
     if [ "$User_New" != "$User_Old" ]; 
