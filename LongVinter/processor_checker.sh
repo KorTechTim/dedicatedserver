@@ -20,14 +20,14 @@ SendNotification () {
 
 
 check=`ps -ef | grep 'longvinter' | wc -l`
-​
+
+
 if [ $check == 2 ]
 then
  echo "Service is Running"
 else
  SendNotification
 fi
-​
 
 
 
