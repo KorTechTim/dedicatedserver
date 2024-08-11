@@ -35,55 +35,42 @@ sudo dpkg --add-architecture i386
 sudo apt update -y
 sudo apt install lib32gcc-s1 steamcmd -y 
 
-
-# 스팀 SDK 설치
-
-cd ~/
-mkdir steamcmd-source
-cd steamcmd-source
-wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
-tar -xvzf steamcmd_linux.tar.gz
-./steamcmd.sh +force_install_dir . +login anonymous +app_update 1007 +quit
+sudo mkdir ~/longvinter-server
 
 
 
-# Copying Steam SDK to the right place
-cd ~/.steam
-mkdir sdk64
-cp ~/steamcmd-source/linux64/steamclient.so ~/.steam/sdk64/
+
+## 게임엔진 설치
+cd ~/longvinter-server
+steamcmd +force_install_dir . +login anonymous +app_update 1639880 validate +quit
 
 
-
-#서버 설치
-cd ~/
-git clone https://github.com/Uuvana-Studios/longvinter-linux-server.git
-sudo chmod -R ugo+rwx longvinter-linux-server/
 
 
 # 환경 변수 파일 
 
 cat <<-EOF > ~/longvinter-linux-server/Longvinter/Saved/Config/LinuxServer/Game.ini
 [/Game/Blueprints/Server/GI_AdvancedSessions.GI_AdvancedSessions_C]
-ServerName=Unnamed Island
-ServerTag=Default
-MaxPlayers=32
-ServerMOTD=Welcome to Longvinter Island!
+ServerName=[EU-WEST] Arlo's Hangout
+ServerMOTD=Welcome to Arlo's Hangout
+MaxPlayers=64
 Password=
-CommunityWebsite=www.longvinter.com
+CommunityWebsite=discord.gg/longvinter
+CoopPlay=false
+CheckVPN=true
+CoopSpawn=0
+Tag=none
+ChestRespawnTime=900
+DisableWanderingTraders=false
+
 [/Game/Blueprints/Server/GM_Longvinter.GM_Longvinter_C]
-AdminSteamID=76561198965966997
-PVP=true
+AdminSteamID=00023652dd9b4673be20d4f83ab42c5b 0002365d948ad82f373be20d4ff8ab42c5b
+PVP=false
 TentDecay=true
-MaxTents=2
-ChestRespawnTime=600
+MaxTents=3
+RestartTime24h=6
+SaveBackups=true
 EOF
-
-
-
-## systemd 등록 ##
-#sudo cp ~/steam/longvinter-linux-server/longvinter.service /etc/systemd/system/longvinter.service
-#sudo cp ~/steam/longvinter-linux-server/longvinter.socket /etc/systemd/system/longvinter.socket
-#sudo systemctl daemon-reload
 
 
 
