@@ -25,6 +25,12 @@ done
 echo
 
 
+
+
+# 방화벽 개방
+sudo iptables -I INPUT -p udp --dport 7777 -j ACCEPT
+
+
  
 # 패키지 업데이트 & 설치
 sudo apt update -y 
@@ -35,8 +41,6 @@ sudo dpkg --add-architecture i386
 sudo apt update -y
 sudo apt install lib32gcc-s1 steamcmd -y 
 
-sudo mkdir ~/longvinter-server
-
 
 
 ## 게임엔진 설치
@@ -46,8 +50,7 @@ steamcmd +force_install_dir . +login anonymous +app_update 1639880 validate +qui
 
 
 # 환경 변수 파일 
-
-cat <<-EOF > ~/Steam/steamapps/common/Longvinter Dedicated Server/Longvinter/Saved/Config/LinuxServer/Game.ini
+cat <<-EOF > ~/Steam/steamapps/common/"Longvinter Dedicated Server"/Longvinter/Saved/Config/LinuxServer/Game.ini
 [/Game/Blueprints/Server/GI_AdvancedSessions.GI_AdvancedSessions_C]
 ServerName=[EU-WEST] Arlo's Hangout
 ServerMOTD=Welcome to Arlo's Hangout
@@ -78,7 +81,7 @@ echo "--------------------------------------------------------------------------
 echo "설치가 완료 되었습니다"
 echo "아래 명령어를 사용하여 서버 설정을 마무리 하세요" 
 echo "---------------------------------------------------------------------------"
-echo "nano ~/Steam/steamapps/common/Longvinter Dedicated Server/Longvinter/Saved/Config/LinuxServer/Game.ini"
+echo "nano ~/Steam/steamapps/common/"Longvinter Dedicated Server"/Longvinter/Saved/Config/LinuxServer/Game.ini"
 echo
 echo
 echo "---------------------------------------------------------------------------"
