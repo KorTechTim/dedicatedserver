@@ -39,9 +39,7 @@ sudo mkdir ~/longvinter-server
 
 
 
-
 ## 게임엔진 설치
-cd ~/longvinter-server
 steamcmd +force_install_dir . +login anonymous +app_update 1639880 validate +quit
 
 
@@ -49,7 +47,7 @@ steamcmd +force_install_dir . +login anonymous +app_update 1639880 validate +qui
 
 # 환경 변수 파일 
 
-cat <<-EOF > ~/longvinter-linux-server/Longvinter/Saved/Config/LinuxServer/Game.ini
+cat <<-EOF > ~/Steam/steamapps/common/Longvinter Dedicated Server/Longvinter/Saved/Config/LinuxServer/Game.ini
 [/Game/Blueprints/Server/GI_AdvancedSessions.GI_AdvancedSessions_C]
 ServerName=[EU-WEST] Arlo's Hangout
 ServerMOTD=Welcome to Arlo's Hangout
@@ -80,13 +78,13 @@ echo "--------------------------------------------------------------------------
 echo "설치가 완료 되었습니다"
 echo "아래 명령어를 사용하여 서버 설정을 마무리 하세요" 
 echo "---------------------------------------------------------------------------"
-echo "nano ~/longvinter-linux-server/Longvinter/Saved/Config/LinuxServer/Game.ini"
+echo "nano ~/Steam/steamapps/common/Longvinter Dedicated Server/Longvinter/Saved/Config/LinuxServer/Game.ini"
 echo
 echo
 echo "---------------------------------------------------------------------------"
 echo "서버 실행은 아래 명령어를 사용하세요"
 echo "---------------------------------------------------------------------------"
-echo "sh ~/longvinter-linux-server/LongvinterServer.sh"    
+echo "sh ~/Steam/steamapps/common/Longvinter Dedicated Server/LongvinterServer.sh"    
 echo
 echo
 
