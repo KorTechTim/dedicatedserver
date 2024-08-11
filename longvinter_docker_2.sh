@@ -81,13 +81,13 @@ echo "--------------------------------------------------------------------------
 echo "설치가 완료 되었습니다"
 echo "아래 명령어를 사용하여 서버 설정을 마무리 하세요" 
 echo "---------------------------------------------------------------------------"
-echo "nano ~/Steam/steamapps/common/"Longvinter Dedicated Server"/Longvinter/Saved/Config/LinuxServer/Game.ini"
+echo "nano ~/Steam/steamapps/common/Longvinter\ Dedicated\ Server/Longvinter/Saved/Config/LinuxServer/Game.ini"
 echo
 echo
 echo "---------------------------------------------------------------------------"
 echo "서버 실행은 아래 명령어를 사용하세요"
 echo "---------------------------------------------------------------------------"
-echo "sh ~/Steam/steamapps/common/Longvinter Dedicated Server/LongvinterServer.sh"    
+echo "sh ~/Steam/steamapps/common/Longvinter\ Dedicated\ Server/LongvinterServer.sh"    
 echo
 echo
 
