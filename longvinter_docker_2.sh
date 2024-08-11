@@ -28,7 +28,7 @@ echo
 
 
 # 방화벽 개방
-sudo iptables -I INPUT -p udp --dport 7777 -j ACCEPT
+# sudo iptables -I INPUT -p udp --dport 7777 -j ACCEPT
 
 
  
