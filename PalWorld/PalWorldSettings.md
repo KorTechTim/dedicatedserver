@@ -1,6 +1,6 @@
 | 파라미터 | 설명 | 기본값 |
 |----------|------|--------|
-| `AdminPassword` | 서버 관리자 권한을 획득하기 위한 비밀번호 | `""` |
+| `AdminPassword` | 서버 관리자 권한을 획득하기 위한 비밀번호 | 없음 |
 | `AutoResetGuildTimeNoOnlinePlayers` | 온라인 유저가 없는 길드를 자동 초기화하는 기준 시간 (시간 단위) | `72.000000` |
 | `AutoSaveSpan` | 자동 저장 간격 (분 단위) | `30.000000` |
 | `BanListURL` | 밴 리스트를 불러올 URL | `"https://api.palworldgame.com/api/banlist.txt"` |
